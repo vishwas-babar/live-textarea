@@ -2,12 +2,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { io } from 'socket.io-client';
 
-const socket = io("http://localhost:4000")
+const socket = io(import.meta.env.VITE_SERVER_URL)
 
 function App() {
   const [content, setContent] = useState("")
-  // const [recievedContentFromServer, setRecievedContentFromServer] = useState("")
-  // const [contentToDisplay, setContentToDisplay] = useState("")
   const [timeOutId, setTimeOutId] = useState<any>("")
   const [isTextAreaInFocus, setIsTextAreaInFocus] = useState(false)
 
