@@ -8,6 +8,9 @@
     "start": "node dist/index.js",
     "build": "tsc -b"
   },
+  "pre-commit": [
+    "build"
+  ],
   "author": "vishwas babar",
   "license": "ISC",
   "description": "",
@@ -20,5 +23,8 @@
     "express": "^4.19.2",
     "socket.io": "^4.7.5",
     "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "pre-commit": "^1.2.2"
   }
 }
